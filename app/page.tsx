@@ -1,7 +1,17 @@
+import Benefits from "@/components/Benefits";
+import Features from "@/components/Features";
+import Landing from "@/components/Landing";
+import NavBar from "@/components/NavBar";
+import Services from "@/components/Services";
+
 export default function Home() {
   return (
-    <div className="flex justify-center items-center w-full h-screen">
-      <h2>hello</h2>
+    <div>
+      <NavBar />
+      <Landing />
+      <Features />
+      <Services />
+      <Benefits />
     </div>
   );
 }
