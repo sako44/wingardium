@@ -34,25 +34,25 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      className="w-full  dark:bg-neutral-950 font-sans md:px-10"
+      className=" w-full dark:bg-neutral-950 font-sans md:px-3 2xl:px-5 overflow-hidden "
       ref={containerRef}
     >
-      <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-5xl mb-4 text-black dark:text-white font-semibold max-w-4xl">
+      <div className=" mx-auto py-20 px-4 md:px-8 lg:px-16 max-lg:text-center">
+        <h2 className="text-4xl sm:text-4xl md:text-5xl mb-4 text-black dark:text-white font-semibold max-w-4xl">
           Nasıl Çalışır?
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-xl max-w-xl">
+        <p className="text-neutral-700 dark:text-neutral-300 text-lg md:text-xl lg:max-w-[70%] 3xl:max-w-[50%] ">
           İlaçlama, gübreleme, stok yönetimi, gider takibi ve diğer tarımsal
           operasyonların izlenmesi gibi kritik işlevleri entegre bir yapıda
           sunar.
         </p>
       </div>
 
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <div ref={ref} className="relative max-w-full mx-auto pb-20 ">
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            className=" flex justify-center items-center pt-10 md:pt-40 md:justify-between  "
           >
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
@@ -63,7 +63,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </h3>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
+            <div className="relative pl-20 pr-4 md:pl-4 ">
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>

@@ -1,5 +1,4 @@
 import Image, { StaticImageData } from "next/image";
-import MotionDiv from "./MotionDiv";
 type ImageProps = {
   url: string | StaticImageData;
   addClass?: string;

@@ -16,7 +16,7 @@ const data = [
         </p>
         <Images
           url={parsel}
-          addClass="w-full  h-[250px] md:h-[170px] md:w-[330px] lg:w-[480px] lg:h-[150px] xl:w-[600px] 2xl:w-[750px] 2xl:h-[300px] "
+          addClass="w-full  h-[250px] md:h-[170px] md:w-[330px] lg:w-[480px] lg:h-[250px] xl:w-[600px] xl:h-[250px] 2xl:w-[750px] 2xl:h-[300px] "
           clas=" object-contain object-center  "
         />
       </div>
@@ -46,7 +46,7 @@ const data = [
         </p>
         <Images
           url={satin}
-          addClass=" w-full  h-[250px] md:h-[170px] md:w-[330px] lg:w-[480px] lg:h-[150px] xl:w-[600px] 2xl:w-[750px] 2xl:h-[300px] "
+          addClass=" w-full  h-[250px] md:h-[170px] md:w-[330px] lg:w-[480px] lg:h-[150px] xl:w-[600px]  2xl:w-[750px] 2xl:h-[300px] "
           clas=" object-contain object-center  "
         />
       </div>
@@ -61,7 +61,7 @@ const data = [
         </p>
         <Images
           url={bildirim}
-          addClass="w-full  h-[250px] md:h-[170px] md:w-[330px] lg:w-[480px] lg:h-[150px] xl:w-[600px] 2xl:w-[750px] 2xl:h-[300px] "
+          addClass="w-full  h-[250px] md:h-[170px] md:w-[330px] lg:w-[480px] lg:h-[150px] xl:w-[600px] xl:h-[200px] 2xl:w-[750px] 2xl:h-[300px] "
           clas=" object-contain object-center  "
         />
       </div>
