@@ -30,7 +30,7 @@ const benefitsData = [
 
 function Benefits() {
   return (
-    <section className="md:px-3 2xl:px-16 3xl:px-28  my-24 ">
+    <section className="md:px-3 2xl:px-16 3xl:px-28  my-32 ">
       <Container clas=" flex flex-col max-lg:space-y-16 lg:flex-row justify-center items-center  ">
         <div className="flex flex-col max-lg:items-center max-lg:text-center space-y-10 lg:max-xl:max-w-[45%]">
           <h2 className=" text-5xl md:text-6xl lg:text-7xl font-semibold text-primary max-w-[70%] 2xl:max-w-[48%] tracking-[6px]">
