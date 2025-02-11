@@ -71,7 +71,7 @@ const MobileNavbar = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
             className="fixed inset-0 z-50 w-full
-             bg-[#585858] pt-[112px] text-popover-foreground px-4 flex justify-center flex-col  h-[100vh]"
+             bg-secondary pt-[112px] text-popover-foreground px-4 flex justify-center flex-col  h-[100vh]"
           >
             <p className="text-lg text-muted-foreground "> </p>
 
@@ -91,14 +91,14 @@ const MobileNavbar = () => {
               ))}
             </div>
             <div className="mt-10 flex flex-col gap-2">
-              <p className="text-gray-300  text-lg">Get In Touch</p>
+              <p className="text-primary  text-lg">Get In Touch</p>
 
               <Link className="text-2xl" href={"mailto:itxti909@gmail.com"}>
                 Social@troikaprod.com
               </Link>
             </div>
-            <div className=" text-[#333] mt-10 flex flex-col gap-4">
-              <p className="text-gray-300  text-lg">FOLLOW US</p>
+            <div className=" text-primary mt-10 flex flex-col gap-4">
+              <p className="text-primary  text-lg">FOLLOW US</p>
               <div className="flex space-x-10 ">
                 <a href="https://www.linkedin.com/company/troika-events-production/">
                   <i className="ri-linkedin-box-fill bg-white rounded-[50%] px-2 py-2 text-[25px] hover:text-primary hover:cursor-pointer transition duration-300 ease-in-out  "></i>

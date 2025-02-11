@@ -30,13 +30,13 @@ const benefitsData = [
 
 function Benefits() {
   return (
-    <section className="md:px-3 2xl:px-16 3xl:px-28  my-32 ">
+    <section className="md:px-3 2xl:px-16 3xl:px-32  my-32 ">
       <Container clas=" flex flex-col max-lg:space-y-16 lg:flex-row justify-center items-center  ">
-        <div className="flex flex-col max-lg:items-center max-lg:text-center space-y-10 lg:max-xl:max-w-[45%]">
-          <h2 className=" text-5xl md:text-6xl lg:text-7xl font-semibold text-primary max-w-[70%] 2xl:max-w-[48%] tracking-[6px]">
+        <div className="flex flex-col max-lg:items-center max-lg:text-center space-y-16 lg:max-xl:max-w-[45%]">
+          <h2 className=" text-5xl md:text-6xl lg:text-7xl/[90px] font-semibold text-primary max-w-[70%] 2xl:max-w-[48%] tracking-[6px]">
             Avantajlar ve Faydalar
           </h2>
-          <h3 className="text-lg md:text-2xl font-normal sm:max-w-[70%] lg:max-w-[80%] 2xl:max-w-[70%] ">
+          <h3 className="text-xl md:text-2xl/[45px] font-normal sm:max-w-[70%] lg:max-w-[80%] 2xl:max-w-[70%] ">
             Fikirlerinizi Wingardium ile gerçeğe dönüştürün. Birçok güçlü
             Avantajlar ile sadelik ve netliği garanti ediyoruz.
           </h3>

@@ -4,7 +4,10 @@ import { HoverEffect } from "./ui/card-hover-effect";
 export default function Features() {
   return (
     <Container clas=" my-16 ">
-      <div id="#ozellik" className="flex flex-col  space-y-6 lg:space-y-8 xl:space-y-12 ">
+      <div
+        id="#ozellik"
+        className="flex flex-col  space-y-6 lg:space-y-8 xl:space-y-12 "
+      >
         <h3 className="text-center text-4xl uppercase md:text-5xl xl:text-6xl font-sofiaProSemiBold text-black  pb-8 border-b border-black">
           Uygulamanın özellİklerİ
         </h3>
