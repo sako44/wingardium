@@ -18,7 +18,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="py-52 bg-secondary my-24">
+    <section id="contact" className="py-52 bg-secondary mt-24">
       <Container
         clas=" flex flex-col lg:flex-row max-lg:space-y-12
         sm:px-8 md:px-12 3xl:px-20 justify-center items-center text-center justify-around "

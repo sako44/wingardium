@@ -22,13 +22,13 @@ function Footer() {
   return (
     <section className="w-full bg-zinc-950 pt-24">
       <Container clas=" flex flex-col space-y-10  ">
-        <div className="flex flex-col lg:flex-row justify-around lg:items-center w-full px-3">
+        <div className="flex flex-col lg:flex-row justify-around 2xl:-space-y-7 3xl:-space-y-10 lg:items-center w-full px-3 md:max-lg:px-7">
           <Images
             url={logo}
-            addClass=" w-96 h-44 self-center "
+            addClass=" w-96 lg:w-72 2xl:w-96 h-44 self-center lg:-ml-12 "
             clas="object-cover object-center"
           />
-          <div className="flex flex-col lg:flex-row lg:space-x-20 max-lg:space-y-10 text-textColor text-start lg:items-center ">
+          <div className="flex flex-col lg:flex-row lg:space-x-12 xl:space-x-20 max-lg:space-y-10 text-textColor text-start lg:items-center ">
             <nav className="flex flex-col space-y-5">
               <h2 className="text-xl font-semibold">Destek :</h2>
               <ul className="space-y-4">
