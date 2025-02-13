@@ -1,7 +1,7 @@
 "use client";
 import Container from "./Container";
 import Autoplay from "embla-carousel-autoplay";
-import { reviews } from "@/data/Reviews";
+import { reviews } from "@/data/reviews";
 
 import {
   Carousel,
