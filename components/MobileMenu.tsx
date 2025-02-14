@@ -50,7 +50,6 @@ const MobileNavbar = () => {
       <div className="fixed inset-0 z-[3000] px-4 h-fit">
         <div className="flex justify-between items-center  pt-2">
           <h2 className="text-xl font-semibold uppercase ">Wingardium </h2>
-
           <div className="z-[100] flex gap-2  items-center  rounded-full">
             <Fade
               toggled={open}
@@ -73,8 +72,6 @@ const MobileNavbar = () => {
             className="fixed inset-0 z-50 w-full
              bg-secondary pt-[112px] text-popover-foreground px-4 flex justify-center flex-col  h-[100vh]"
           >
-            <p className="text-lg text-muted-foreground "> </p>
-
             <div className="flex flex-col gap-8 mt-7 items-start ">
               {navLinks.map((link, index) => (
                 <Button
@@ -92,7 +89,6 @@ const MobileNavbar = () => {
             </div>
             <div className="mt-10 flex flex-col gap-2">
               <p className="text-primary  text-lg">Get In Touch</p>
-
               <Link className="text-2xl" href={"mailto:itxti909@gmail.com"}>
                 Social@troikaprod.com
               </Link>

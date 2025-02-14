@@ -11,7 +11,7 @@ function Faq() {
   return (
     <section className="w-full mx-auto my-24">
       <Container clas=" flex flex-col  space-y-12 ">
-        <h2 className="text-center text-4xl uppercase md:text-5xl xl:text-6xl font-sofiaProSemiBold text-black pb-8 border-b border-black">
+        <h2 className="text-center font-fontNunito text-4xl uppercase md:text-5xl xl:text-6xl font-sofiaProSemiBold text-black pb-8 border-b border-black">
           FAQ
         </h2>
         <Accordion
@@ -25,10 +25,10 @@ function Faq() {
               key={index}
               value={`item-${index + 1}`}
             >
-              <AccordionTrigger className="text-xl ">
+              <AccordionTrigger className="text-xl font-fontNunito">
                 {Item.question}
               </AccordionTrigger>
-              <AccordionContent className="text-lg font-normal">
+              <AccordionContent className="text-lg font-normal font-fontRaleway">
                 {Item.answer}
               </AccordionContent>
             </AccordionItem>

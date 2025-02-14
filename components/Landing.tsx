@@ -17,9 +17,9 @@ function Landing() {
           <source src="/videos/farming2.mp4" />
           <source src="/videos/farming2.mp4" />
         </video>
-        <div className="absolute z-10 flex flex-col space-y-8 max-w-[90%]">
-          <h1 className="text-white text-xl md:text-2xl lg:text-3xl font-semibold text-center max-lg:leading-10">
-            <span className=" text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-bold pr-3 text-primary">
+        <div className="absolute z-10 flex flex-col space-y-8 font-fontNunito max-w-[90%]">
+          <h1 className="text-white text-xl md:text-2xl lg:text-3xl font-semibold  text-center max-lg:leading-10">
+            <span className=" text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-bold  pr-3 text-primary">
               Wingardium
             </span>
             ile Tarımda Verimliliği Yükseltin!

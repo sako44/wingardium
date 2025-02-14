@@ -70,9 +70,9 @@ const data = [
 ];
 export default function Services() {
   return (
-    <div className="w-full bg-secondary">
+    <div id="#hizmet" className="w-full bg-secondary">
       <Container>
-        <div className="w-full">
+        <div id="#hizmet" className="w-full">
           <Timeline data={data} />
         </div>
       </Container>

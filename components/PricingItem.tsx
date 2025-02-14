@@ -16,12 +16,16 @@ function PricingItem({
   features,
 }: PricingItemProps) {
   return (
-    <div className="border border-zinc-700 shadow-xl rounded-lg px-8 py-10 flex flex-col space-y-5">
+    <div className="border font-fontRaleway border-zinc-700 shadow-xl rounded-lg px-8 py-10 flex flex-col space-y-5">
       <div className="flex flex-col space-y-5">
         <h2 className="text-3xl font-semibold">{title}</h2>
         <h3 className="text-xl font-normal">{description}</h3>
       </div>
-      <p className={` ${price == 30 && " text-primary "}" text-xl font-normal"`}>
+      <p
+        className={` ${
+          price == 30 && " text-primary "
+        }" text-xl font-fontNunito font-normal"`}
+      >
         <span className="text-5xl font-bold">${price}</span>/month
       </p>
       <ul className="space-y-2">

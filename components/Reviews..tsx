@@ -17,7 +17,7 @@ function Reviews() {
     <section className=" mb-32 mt-44  ">
       <Container>
         <div className="flex flex-col  space-y-6 lg:space-y-8 xl:space-y-12 ">
-          <h3 className="text-center text-4xl uppercase md:text-5xl xl:text-6xl font-sofiaProSemiBold text-black  pb-8 border-b border-black">
+          <h3 className="text-center font-fontNunito text-4xl uppercase md:text-5xl xl:text-6xl font-sofiaProSemiBold text-black  pb-8 border-b border-black">
             Kullanıcı Yorumları
           </h3>
           <div className="mt-10 w-full">
@@ -38,22 +38,22 @@ function Reviews() {
                 {reviews.map((review, index) => (
                   <CarouselItem
                     key={index}
-                    className="  sm:basis-1/2 md:basis-1/2 lg:basis-1/3 2xl:basis-1/4"
+                    className=" font-fontRaleway sm:basis-1/2 md:basis-1/2 lg:basis-1/3 2xl:basis-1/4"
                   >
                     <div className="flex flex-col bg-secondary border border-primary rounded-[15px] h-[210px] p-5 space-y-3  ">
-                      <p className="flex items-center space-x-4">
+                      <div className="flex items-center space-x-4">
                         <Images
                           url={review.icon}
                           addClass=" w-12 h-12 rounded-full"
                           clas=" object-cover object-center  "
                         />
-                        <p>
+                        <div>
                           <h1 className="text-xl font-semibold">
                             {review.name}
                           </h1>
                           <h4 className="font-light text-md">Client Review</h4>
-                        </p>
-                      </p>
+                        </div>
+                      </div>
                       <p>{review.review}</p>
                     </div>
                   </CarouselItem>

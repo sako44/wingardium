@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import logo from "@/public/icon/logo.svg";
 import "remixicon/fonts/remixicon.css";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { Nunito, Raleway } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const nunito = Nunito({
+  variable: "--font-nunito",
+  weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const raleway = Raleway({
+  variable: "--font-raleway",
+  weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
 });
 
@@ -30,11 +32,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+        className={` ${nunito.variable} ${raleway.variable} antialiased bg-[#f7f8f4] scroll-smooth	scroll-mt-5 `}
       >
         {children}
       </body>
-      <Footer />
     </html>
   );
 }

@@ -7,6 +7,8 @@ import Pricing from "@/components/Pricing";
 import Reviews from "@/components/Reviews.";
 import Services from "@/components/Services";
 import Contact from "@/components/Contact";
+import StickyWhatsapp from "@/components/StickyWhatsapp";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
       <Pricing />
       <Faq />
       <Contact />
+      <Footer />
+      <StickyWhatsapp />
     </div>
   );
 }

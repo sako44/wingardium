@@ -6,10 +6,10 @@ function Pricing() {
   return (
     <section className="my-24 px-4 sm:px-24 md:px-4 py-24 xl:p-24 bg-secondary flex items-center justify-center">
       <div>
-        <h2 className="text-center text-4xl mx-auto md:text-5xl lg:text-5xl xl:text-6xl font-semibold">
+        <h2 className="text-center font-fontNunito text-4xl mx-auto md:text-5xl lg:text-5xl xl:text-6xl font-semibold">
           Fiyatlandırma ve Planlar
         </h2>
-        <p className="text-center text-lg  lg:text-xl xl:text-2xl font-normal md:max-w-[70%]   mx-auto my-5">
+        <p className="text-center text-lg font-fontRaleway lg:text-xl xl:text-2xl font-normal md:max-w-[70%]   mx-auto my-5">
           Kendiniz için ücretsiz kullanın, ekibinizin gelişmiş kontrole ihtiyacı
           olduğunda yükseltin.
         </p>
