@@ -29,9 +29,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={` ${nunito.variable} ${raleway.variable} antialiased bg-[#f7f8f4] scroll-smooth	scroll-mt-5 `}
+        className={` ${nunito.variable} ${raleway.variable} antialiased bg-[#f7f8f4]  `}
       >
         {children}
       </body>

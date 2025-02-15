@@ -6,7 +6,10 @@ import { animatedPlansTwo, animatedPlansOne } from "@/utils/motionObjects";
 
 function Pricing() {
   return (
-    <section className="my-24 px-4 sm:px-24 md:px-4 py-24 xl:p-24 bg-secondary flex items-center justify-center">
+    <section
+      id="plan"
+      className="my-24 px-4 sm:px-24 md:px-4 py-24 xl:p-24 bg-secondary flex items-center justify-center"
+    >
       <div>
         <MotionH2
           {...animatedPlansOne}
@@ -27,7 +30,10 @@ function Pricing() {
             <MotionDiv
               key={index}
               {...animatedPlansTwo}
-              transition={{ ...animatedPlansTwo.transition, delay: index * 0.4 }}
+              transition={{
+                ...animatedPlansTwo.transition,
+                delay: index * 0.4,
+              }}
             >
               <PricingItem
                 title={plan.title}

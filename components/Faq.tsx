@@ -12,7 +12,7 @@ import { animatedBenfitOne } from "@/utils/motionObjects";
 
 function Faq() {
   return (
-    <section className="w-full mx-auto my-24">
+    <section id="faq" className="w-full mx-auto my-24">
       <Container clas=" flex flex-col  space-y-12 ">
         <AnimatedHeader title="FAQ" />
         <Accordion

@@ -302,3 +302,18 @@ export const services = [
       "w-full  h-[250px] md:h-[170px] md:w-[330px] lg:w-[480px] lg:h-[150px] xl:w-[600px] xl:h-[200px] 2xl:w-[750px] 2xl:h-[300px] ",
   },
 ];
+
+export const supportNav = [
+  {
+    title: "Help & FAQs",
+    url: "#faq",
+  },
+  {
+    title: "İletişim",
+    url: "#iletisim",
+  },
+  {
+    title: "Canlı Destek",
+    url: "https://wa.me/+905347926583?text=Merhaba%20",
+  },
+];

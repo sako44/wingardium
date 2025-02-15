@@ -7,7 +7,7 @@ export default function Features() {
   return (
     <Container clas=" my-16 overflow-x-hidden ">
       <div
-        id="#ozellik"
+        id="ozellik"
         className="flex flex-col  space-y-6 lg:space-y-8 xl:space-y-12 "
       >
         <AnimatedHeader title="Uygulamanın özellİklerİ" />

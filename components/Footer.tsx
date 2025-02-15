@@ -4,22 +4,9 @@ import Images from "./images";
 import MotionDiv from "./MotionDiv";
 import logo from "@/public/photos/logo.png";
 import { animatedFooter } from "@/utils/motionObjects";
+import { supportNav } from "@/data/allData";
 
 function Footer() {
-  const support = [
-    {
-      title: "Help & FAQs",
-      url: "#faq",
-    },
-    {
-      title: "İletişim",
-      url: "#iletisim",
-    },
-    {
-      title: "Canlı Destek",
-      url: "#plan",
-    },
-  ];
   return (
     <section className="w-full bg-zinc-950 pt-24">
       <Container clas=" flex flex-col space-y-10 font-fontRaleway  ">
@@ -36,11 +23,12 @@ function Footer() {
             <nav className="flex flex-col space-y-5 ">
               <h2 className="text-xl font-semibold ">Destek :</h2>
               <ul className="space-y-4">
-                {support.map((item, index) => (
+                {supportNav.map((item, index) => (
                   <li key={index}>
                     <Link
                       className="hover:text-primary transition-all duration-300 ease-in-out"
                       href={item.url}
+                      target={index === 2 ? "_blank" : undefined}
                     >
                       {item.title}
                     </Link>
