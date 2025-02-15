@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useForm, type FieldValues } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { MotionForm } from "./MotionDiv";
 import { formData } from "@/data/allData";

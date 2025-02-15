@@ -5,10 +5,9 @@ type BenefitsItemProps = {
   title: string;
   description: string;
   icon: string | StaticImageData;
-  id?: number;
 };
 
-function BenefitsItem({ title, description, icon, id }: BenefitsItemProps) {
+function BenefitsItem({ title, description, icon }: BenefitsItemProps) {
   return (
     <div className="flex flex-col text-center font-fontRaleway  items-center justify-center space-y-5 bg-[#f1f1f1] border border-primary shadow-xl px-5 py-7 rounded-lg">
       <Images url={icon} addClass=" w-16 h-16 " clas="" />

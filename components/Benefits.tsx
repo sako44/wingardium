@@ -47,7 +47,6 @@ function Benefits() {
                   title={item.title}
                   description={item.description}
                   icon={item.icon}
-                  id={index}
                 />
               ) : null
             )}
@@ -55,17 +54,16 @@ function Benefits() {
           <MotionDiv
             {...animatedBenfitOne}
             initial={{ ...animatedBenfitOne.initial, x: 30 }}
-            whileInView={{...animatedBenfitOne.whileInView, x: 0 }}
+            whileInView={{ ...animatedBenfitOne.whileInView, x: 0 }}
             className="flex flex-col gap-y-5"
           >
             {benefits.map((item, index) =>
               index === 1 || index == 3 ? (
                 <BenefitsItem
-                  key={item.id}
+                  key={index}
                   title={item.title}
                   description={item.description}
                   icon={item.icon}
-                  id={index}
                 />
               ) : null
             )}
