@@ -7,11 +7,8 @@ import MotionDiv from "../MotionDiv";
 import { animatedTimeline, animatedTimelineTwo } from "@/utils/motionObjects";
 
 interface TimelineEntry {
-  id: number;
   title: string;
-  description: string;
-  url: string | StaticImageData;
-  imageClass?: string;
+  content: React.ReactNode;
 }
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
@@ -72,27 +69,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 {item.title}
               </h3>
             </MotionDiv>
-            <MotionDiv
-              {...animatedTimelineTwo}
-              initial={{ ...animatedTimelineTwo.initial, x: 30 }}
-              whileInView={{ ...animatedTimelineTwo.whileInView, x: 0 }}
-              className="relative pl-20 pr-4 md:pl-4 "
-            >
-              <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
-                {item.title}
-              </h3>
-              <div>
-                <p className="text-neutral-800 dark:text-neutral-200 text-lg md:text-2xl font-normal mb-8">
-                  {item.description}
-                </p>
-                <Images
-                  url={item.url}
-                  addClass={item.imageClass}
-                  clas=" object-contain object-center  "
-                />
-              </div>
-              {""}
-            </MotionDiv>
+            {item.content}{" "}
           </div>
         ))}
         <MotionDiv
