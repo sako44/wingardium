@@ -1,8 +1,8 @@
 "use client";
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
-import Images from "../images";
-import { StaticImageData } from "next/image";
+// import Images from "../images";
+// import { StaticImageData } from "next/image";
 import MotionDiv from "../MotionDiv";
 import { animatedTimeline, animatedTimelineTwo } from "@/utils/motionObjects";
 
