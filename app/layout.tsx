@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import logo from "@/public/icon/logo.svg";
 import "remixicon/fonts/remixicon.css";
 import "./globals.css";
-import Footer from "@/components/Footer";
 import { Nunito, Raleway } from "next/font/google";
 
 const nunito = Nunito({

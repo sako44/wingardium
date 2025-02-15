@@ -5,7 +5,7 @@ type BenefitsItemProps = {
   title: string;
   description: string;
   icon: string | StaticImageData;
-  id: number;
+  id?: number;
 };
 
 function BenefitsItem({ title, description, icon, id }: BenefitsItemProps) {

@@ -1,15 +1,10 @@
 "use client";
-import {
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-  motion,
-} from "framer-motion";
+import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import Images from "../images";
 import { StaticImageData } from "next/image";
 import MotionDiv from "../MotionDiv";
-import { animatedTimeline,animatedTimelineTwo } from "@/utils/motionObjects";
+import { animatedTimeline, animatedTimelineTwo } from "@/utils/motionObjects";
 
 interface TimelineEntry {
   id: number;
@@ -45,7 +40,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
       ref={containerRef}
     >
       <MotionDiv
-       {...animatedTimeline}
+        {...animatedTimeline}
         className=" mx-auto py-20 font-fontNunito px-4 md:px-8 lg:px-16 max-lg:text-center"
       >
         <h2 className="text-4xl sm:text-4xl md:text-5xl mb-4 text-black dark:text-white font-semibold max-w-4xl">
@@ -79,8 +74,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             </MotionDiv>
             <MotionDiv
               {...animatedTimelineTwo}
-              initial= {{...animatedTimelineTwo.initial, x: 30}}
-              whileInView= {{...animatedTimelineTwo.whileInView, x: 0}}
+              initial={{ ...animatedTimelineTwo.initial, x: 30 }}
+              whileInView={{ ...animatedTimelineTwo.whileInView, x: 0 }}
               className="relative pl-20 pr-4 md:pl-4 "
             >
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
