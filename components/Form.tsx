@@ -3,7 +3,8 @@ import React from "react";
 import { useForm, type FieldValues } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { MotionForm } from "./MotionDiv";
-import { formData } from "@/data/formData";
+import { formData } from "@/data/allData";
+import { animatedBenfitOne } from "@/utils/motionObjects";
 
 function Form() {
   const {
@@ -19,10 +20,9 @@ function Form() {
   };
   return (
     <MotionForm
-      initial={{ y: -30, opacity: 0 }}
-      viewport={{ once: true }}
-      whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1.5, type: "spring", delay: 0.3 }}
+      {...animatedBenfitOne}
+      initial={{ ...animatedBenfitOne.initial, x: 30 }}
+      whileInView={{ ...animatedBenfitOne.whileInView, x: 0 }}
       onSubmit={handleSubmit(onSubmit)}
       className=" relative font-fontRaleway
     w-[80%] sm:w-[65%] lg:max-w-[50%] xl:max-w-[550px] flex flex-col order-last

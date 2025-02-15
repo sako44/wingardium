@@ -3,6 +3,7 @@ import Container from "./Container";
 import Images from "./images";
 import MotionDiv from "./MotionDiv";
 import logo from "@/public/photos/logo.png";
+import { animatedFooter } from "@/utils/motionObjects";
 
 function Footer() {
   const support = [
@@ -22,7 +23,10 @@ function Footer() {
   return (
     <section className="w-full bg-zinc-950 pt-24">
       <Container clas=" flex flex-col space-y-10 font-fontRaleway  ">
-        <div className="flex flex-col lg:flex-row  justify-around  2xl:-space-y-7 3xl:-space-y-10 lg:items-center w-full px-3 md:max-lg:px-7">
+        <MotionDiv
+          {...animatedFooter}
+          className="flex flex-col lg:flex-row  justify-around  2xl:-space-y-7 3xl:-space-y-10 lg:items-center w-full px-3 md:max-lg:px-7"
+        >
           <Images
             url={logo}
             addClass=" w-96 lg:w-72 2xl:w-96 h-44 self-center lg:-ml-12 "
@@ -84,14 +88,12 @@ function Footer() {
               </div>
             </nav>
           </div>
-        </div>
+        </MotionDiv>
         <div>
           <hr className="lg:w-[103%] w-full lg:-ml-[17px] 2xl:-ml-[23px] h-[3px]  bg-textColor" />
           <MotionDiv
-            initial={{ y: -30, opacity: 0 }}
-            viewport={{ once: true }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.5, type: "spring", delay: 0.4 }}
+            {...animatedFooter}
+            transition={{ ...animatedFooter.transition, delay: 1 }}
             className="py-7 text-textColor flex flex-col max-lg:space-y-5 lg:flex-row lg:justify-between"
           >
             <p className="xs:text-center">All Rights Reserved</p>

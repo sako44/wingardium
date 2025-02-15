@@ -1,17 +1,19 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import MotionDiv from "../MotionDiv";
 import Link from "next/link";
 import { useState } from "react";
+import { animatedCardHover } from "@/utils/motionObjects";
 
 export const HoverEffect = ({
   items,
   className,
 }: {
   items: {
+    id: number;
     title: string;
     description: string;
-    link: string;
   }[];
   className?: string;
 }) => {
@@ -25,35 +27,42 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          href={item?.link}
-          key={item?.link}
-          className="relative group  block p-2 h-full w-full "
-          onMouseEnter={() => setHoveredIndex(idx)}
-          onMouseLeave={() => setHoveredIndex(null)}
+        <MotionDiv
+         {...animatedCardHover}
+         transition={{...animatedCardHover.transition, delay: idx * 0.2}}
+          key={item.id}
         >
-          <AnimatePresence>
-            {hoveredIndex === idx && (
-              <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-700 dark:bg-slate-800/[0.8] block  rounded-3xl"
-                layoutId="hoverBackground"
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { duration: 0.15 },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
-                }}
-              />
-            )}
-          </AnimatePresence>
-          <Card>
-            <CardTitle className=" uppercase text-xl">{item.title}</CardTitle>
-            <CardDescription className=" text-lg ">{item.description}</CardDescription>
-          </Card>
-        </Link>
+          <Link
+            href="#"
+            className="relative group  block p-2 h-full w-full "
+            onMouseEnter={() => setHoveredIndex(idx)}
+            onMouseLeave={() => setHoveredIndex(null)}
+          >
+            <AnimatePresence>
+              {hoveredIndex === idx && (
+                <motion.span
+                  className="absolute inset-0 h-full w-full bg-neutral-700 dark:bg-slate-800/[0.8] block  rounded-3xl"
+                  layoutId="hoverBackground"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: 1,
+                    transition: { duration: 0.15 },
+                  }}
+                  exit={{
+                    opacity: 0,
+                    transition: { duration: 0.15, delay: 0.2 },
+                  }}
+                />
+              )}
+            </AnimatePresence>
+            <Card>
+              <CardTitle className=" uppercase text-xl">{item.title}</CardTitle>
+              <CardDescription className=" text-lg ">
+                {item.description}
+              </CardDescription>
+            </Card>
+          </Link>
+        </MotionDiv>
       ))}
     </div>
   );
