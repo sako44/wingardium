@@ -11,7 +11,13 @@ function Images({ url, addClass, clas }: ImageProps) {
       className={` ${addClass}
     } " aspect-square relative overflow-hidden "`}
     >
-      <Image fill alt={"image"} priority src={url} className={` ${clas} `} />
+      <Image
+        fill
+        alt={url.toString()}
+        priority
+        src={url}
+        className={` ${clas} `}
+      />
     </div>
   );
 }

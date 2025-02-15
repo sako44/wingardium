@@ -87,7 +87,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 </p>
                 <Images
                   url={item.url}
-                  addClass={`${item.imageClass} `}
+                  addClass={item.imageClass}
                   clas=" object-contain object-center  "
                 />
               </div>
