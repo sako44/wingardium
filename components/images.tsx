@@ -17,6 +17,7 @@ function Images({ url, addClass, clas }: ImageProps) {
         priority
         src={url}
         className={` ${clas} `}
+        unoptimized 
       />
     </div>
   );

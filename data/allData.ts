@@ -1,43 +1,45 @@
-import zaman from "@/public/photos/zaman.svg";
-import maliyet from "@/public/photos/maliyet.svg";
-import verim from "@/public/photos/verimlilik.svg";
-import hata from "@/public/photos/hata.svg";
+// import zaman from "@/public/photos/zaman.svg";
+// import maliyet from "@/public/photos/maliyet.svg";
+// import verim from "@/public/photos/verimlilik.svg";
+// import hata from "@/public/photos/hata.svg";
+
 import boy1 from "@/public/photos/userb1.svg";
 import boy2 from "@/public/photos/userb2.svg";
 import women1 from "@/public/photos/userw1.svg";
 import women2 from "@/public/photos/userw2.svg";
+
 import bildirim from "@/public/photos/bildirim.png";
 import ilac from "@/public/photos/ilac.png";
 import parsel from "@/public/photos/parsel.png";
 import satin from "@/public/photos/satin.png";
-//
-export const benefits = [
-  {
-    id: 1,
-    title: "Zaman Tasarrufu",
-    description: "Süreçlerin dijitalleşmesiyle hızlı yönetim.",
-    icon: zaman,
-  },
-  {
-    id: 2,
-    title: "Maliyet Kontrolü",
-    description: "Girdi maliyetlerinin ayrıntılı takibi.",
-    icon: maliyet,
-  },
-  {
-    id: 3,
-    title: "Verimlilik Artışı",
-    description: "Doğru zamanlamalarla artan verim.",
-    icon: verim,
-  },
-  {
-    id: 4,
-    title: "Hataları Minimize Etme",
-    description: "Manuel hataların işlemlerini önlenmesi.",
-    icon: hata,
-  },
-];
-//
+//photos
+// export const benefits = [
+//   {
+//     id: 1,
+//     title: "Zaman Tasarrufu",
+//     description: "Süreçlerin dijitalleşmesiyle hızlı yönetim.",
+//     icon: zaman,
+//   },
+//   {
+//     id: 2,
+//     title: "Maliyet Kontrolü",
+//     description: "Girdi maliyetlerinin ayrıntılı takibi.",
+//     icon: maliyet,
+//   },
+//   {
+//     id: 3,
+//     title: "Verimlilik Artışı",
+//     description: "Doğru zamanlamalarla artan verim.",
+//     icon: verim,
+//   },
+//   {
+//     id: 4,
+//     title: "Hataları Minimize Etme",
+//     description: "Manuel hataların işlemlerini önlenmesi.",
+//     icon: hata,
+//   },
+// ];
+
 export const faq = [
   {
     id: 1,
@@ -195,6 +197,7 @@ export const plans = [
   },
 ];
 
+//photos
 export const reviews = [
   {
     id: 1,
@@ -267,7 +270,20 @@ export const reviews = [
       "Sensörlerle Tam Uyumluluk – Toprak nemi ve sıcaklığı anlık gösteriliyor. Otomatik sulama entegrasyonu da mükemmel çalışıyor!",
   },
 ];
+const reviewsImages = [
+  { icon: boy1 },
+  { icon: women1 },
+  { icon: boy2 },
+  { icon: women2 },
+  { icon: boy1 },
+  { icon: boy1 },
+  { icon: women1 },
+  { icon: boy2 },
+  { icon: women2 },
+  { icon: boy1 },
+];
 
+//photos
 export const services = [
   {
     id: 1,

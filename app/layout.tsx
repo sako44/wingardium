@@ -3,6 +3,8 @@ import logo from "@/public/icon/logo.svg";
 import "remixicon/fonts/remixicon.css";
 import "./globals.css";
 import { Nunito, Raleway } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 
 const nunito = Nunito({
   variable: "--font-nunito",
@@ -15,6 +17,9 @@ const raleway = Raleway({
   weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
 });
+
+const messages = await getMessages();
+const locale = await getLocale();
 
 export const metadata: Metadata = {
   title: "WINGARDIUM",
@@ -29,11 +34,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang={locale} className="scroll-smooth">
       <body
+        key={locale}
         className={` ${nunito.variable} ${raleway.variable} antialiased bg-[#f7f8f4]  `}
       >
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

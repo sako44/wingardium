@@ -1,6 +1,6 @@
 import Container from "./Container";
-import { faq } from "@/data/allData";
 import AnimatedHeader from "./AnimatedHeader";
+import { useTranslations } from "next-intl";
 import {
   Accordion,
   AccordionContent,
@@ -11,16 +11,49 @@ import MotionDiv from "./MotionDiv";
 import { animatedBenfitOne } from "@/utils/motionObjects";
 
 function Faq() {
+  const t = useTranslations("Faq");
+  const faqData = [
+    {
+      id: 1,
+      question: t("faq_1_question"),
+      answer: t("faq_1_answer"),
+      value: "item-1",
+    },
+    {
+      id: 2,
+      question: t("faq_2_question"),
+      answer: t("faq_2_answer"),
+      value: "item-2",
+    },
+    {
+      id: 3,
+      question: t("faq_3_question"),
+      answer: t("faq_3_answer"),
+      value: "item-3",
+    },
+    {
+      id: 4,
+      question: t("faq_4_question"),
+      answer: t("faq_4_answer"),
+      value: "item-4",
+    },
+    {
+      id: 5,
+      question: t("faq_5_question"),
+      answer: t("faq_5_answer"),
+      value: "item-5",
+    },
+  ];
   return (
     <section id="faq" className="w-full mx-auto my-24">
       <Container clas=" flex flex-col  space-y-12 ">
-        <AnimatedHeader title="FAQ" />
+        <AnimatedHeader title={t("title")} />
         <Accordion
           type="single"
           collapsible
           className="w-[90%] md:w-[80%] xl:md:w-[70%] 3xl:w-[60%] mx-auto"
         >
-          {faq.map((Item, index) => (
+          {faqData.map((Item, index) => (
             <MotionDiv
               {...animatedBenfitOne}
               transition={{

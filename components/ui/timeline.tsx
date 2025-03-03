@@ -6,12 +6,13 @@ import React, { useEffect, useRef, useState } from "react";
 import MotionDiv from "../MotionDiv";
 import { animatedTimeline, animatedTimelineTwo } from "@/utils/motionObjects";
 
-interface TimelineEntry {
-  title: string;
-  content: React.ReactNode;
-}
+type TimelineEntry = {
+  data: { title: string; content: React.ReactNode }[];
+  hero: string;
+  description: string;
+};
 
-export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
+export const Timeline = ({ data, hero, description }: TimelineEntry) => {
   const ref = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
@@ -41,12 +42,10 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         className=" mx-auto py-20 font-fontNunito px-4 md:px-8 lg:px-16 max-lg:text-center"
       >
         <h2 className="text-4xl sm:text-4xl md:text-5xl mb-4 text-black dark:text-white font-semibold max-w-4xl">
-          Nasıl Çalışır?
+          {hero}
         </h2>
         <p className="text-neutral-700 dark:text-neutral-300 text-lg md:text-xl lg:max-w-[70%] 3xl:max-w-[50%] ">
-          İlaçlama, gübreleme, stok yönetimi, gider takibi ve diğer tarımsal
-          operasyonların izlenmesi gibi kritik işlevleri entegre bir yapıda
-          sunar.
+          {description}
         </p>
       </MotionDiv>
       <div

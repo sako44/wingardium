@@ -9,12 +9,13 @@ import Services from "@/components/Services";
 import Contact from "@/components/Contact";
 import StickyWhatsapp from "@/components/StickyWhatsapp";
 import Footer from "@/components/Footer";
+import LandingTwo from "@/components/LandingTwo";
 
 export default function Home() {
   return (
     <div>
       <NavBar />
-      <Landing />
+      <LandingTwo />
       <Features />
       <Services />
       <Benefits />

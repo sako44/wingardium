@@ -4,9 +4,24 @@ import Images from "./images";
 import MotionDiv from "./MotionDiv";
 import logo from "@/public/photos/logo.png";
 import { animatedFooter } from "@/utils/motionObjects";
-import { supportNav } from "@/data/allData";
+import { useTranslations } from "next-intl";
 
 function Footer() {
+  const t = useTranslations("Footer");
+  const supportNavData = [
+    {
+      title: t("support_nav_1_title"),
+      url: t("support_nav_1_url"),
+    },
+    {
+      title: t("support_nav_2_title"),
+      url: t("support_nav_2_url"),
+    },
+    {
+      title: t("support_nav_3_title"),
+      url: t("support_nav_3_url"),
+    },
+  ];
   return (
     <section className="w-full bg-zinc-950 pt-24">
       <Container clas=" flex flex-col space-y-10 font-fontRaleway  ">
@@ -21,9 +36,9 @@ function Footer() {
           />
           <div className="flex flex-col lg:flex-row lg:space-x-12 xl:space-x-20 max-lg:space-y-10  text-textColor text-start lg:items-center ">
             <nav className="flex flex-col space-y-5 ">
-              <h2 className="text-xl font-semibold ">Destek :</h2>
+              <h2 className="text-xl font-semibold ">{t("herOne")}</h2>
               <ul className="space-y-4">
-                {supportNav.map((item, index) => (
+                {supportNavData.map((item, index) => (
                   <li key={index}>
                     <Link
                       className="hover:text-primary transition-all duration-300 ease-in-out"
@@ -37,7 +52,7 @@ function Footer() {
               </ul>
             </nav>
             <nav className="flex flex-col space-y-5 self-start">
-              <h2 className="text-xl  font-semibold">İletişim :</h2>
+              <h2 className="text-xl  font-semibold">{t("herTwo")}</h2>
               <ul className="space-y-4">
                 <li>
                   {" "}
@@ -57,7 +72,7 @@ function Footer() {
               </ul>
             </nav>
             <nav className="flex flex-col space-y-12 self-start">
-              <h2 className="text-xl font-semibold">Bizi Takip Et :</h2>
+              <h2 className="text-xl font-semibold">{t("herThree")}</h2>
               <div className=" text-primary ">
                 <div className="flex space-x-7 ">
                   <a href="https://www.discord.com/wingardium">

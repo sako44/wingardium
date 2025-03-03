@@ -5,9 +5,34 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import MotionDiv from "./MotionDiv";
+import { useTranslations } from "next-intl";
+import TranslateButton from "./TranslateButton";
 
 const MobileNavbar = () => {
   const [open, setOpen] = useState(false);
+  const t = useTranslations("MobileMenu");
+  const navLinks = [
+    {
+      title: t("nav_link_1_title"),
+      url: t("nav_link_1_url"),
+      active: false,
+    },
+    {
+      title: t("nav_link_2_title"),
+      url: t("nav_link_2_url"),
+      active: false,
+    },
+    {
+      title: t("nav_link_3_title"),
+      url: t("nav_link_3_url"),
+      active: false,
+    },
+    {
+      title: t("nav_link_4_title"),
+      url: t("nav_link_4_url"),
+      active: false,
+    },
+  ];
 
   const closeMenu = () => {
     setOpen(false);
@@ -16,29 +41,6 @@ const MobileNavbar = () => {
   useEffect(() => {
     setOpen(false);
   }, []);
-
-  const navLinks = [
-    {
-      title: "Hizmetler",
-      active: false,
-      url: "#hizmet",
-    },
-    {
-      title: "Özellikler",
-      active: false,
-      url: "#ozellik",
-    },
-    {
-      title: "Planlar",
-      active: false,
-      url: "#plan",
-    },
-    {
-      title: "İletişim",
-      active: false,
-      url: "#iletisim",
-    },
-  ];
 
   return (
     <MotionDiv
@@ -50,14 +52,17 @@ const MobileNavbar = () => {
       <div className="fixed inset-0 z-[3000] px-4 h-fit">
         <div className="flex justify-between items-center  pt-2">
           <h2 className="text-xl font-semibold uppercase ">Wingardium </h2>
-          <div className="z-[100] flex gap-2  items-center  rounded-full">
-            <Fade
-              toggled={open}
-              onToggle={() => setOpen((prev) => !prev)}
-              duration={0.5}
-              size={25}
-              color="black"
-            />
+          <div className="flex items-center space-x-3">
+            <TranslateButton />
+            <div className="z-[100] flex gap-2  items-center  rounded-full">
+              <Fade
+                toggled={open}
+                onToggle={() => setOpen((prev) => !prev)}
+                duration={0.5}
+                size={25}
+                color="black"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -88,13 +93,13 @@ const MobileNavbar = () => {
               ))}
             </div>
             <div className="mt-10 flex flex-col gap-2">
-              <p className="text-primary  text-lg">Get In Touch</p>
+              <p className="text-primary  text-lg">{t("emailTitle")}</p>
               <Link className="text-2xl" href={"mailto:itxti909@gmail.com"}>
                 Social@troikaprod.com
               </Link>
             </div>
             <div className=" text-primary mt-10 flex flex-col gap-4">
-              <p className="text-primary  text-lg">FOLLOW US</p>
+              <p className="text-primary  text-lg">{t("takipTitle")}</p>
               <div className="flex space-x-10 ">
                 <a href="https://www.linkedin.com/company/troika-events-production/">
                   <i className="ri-linkedin-box-fill bg-white rounded-[50%] px-2 py-2 text-[25px] hover:text-primary hover:cursor-pointer transition duration-300 ease-in-out  "></i>

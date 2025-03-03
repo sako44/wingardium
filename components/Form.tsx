@@ -3,10 +3,34 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { MotionForm } from "./MotionDiv";
-import { formData } from "@/data/allData";
+import { useTranslations } from "next-intl";
 import { animatedBenfitOne } from "@/utils/motionObjects";
 
 function Form() {
+  const t = useTranslations("Contact");
+  const formData = [
+    {
+      id: 1,
+      name: "name",
+      type: "text",
+      placeholder: t("name_placeholder"),
+      required: t("name_required"),
+    },
+    {
+      id: 2,
+      name: "email",
+      type: "email",
+      placeholder: t("email_placeholder"),
+      required: t("email_required"),
+    },
+    {
+      id: 3,
+      name: "phone",
+      type: "text",
+      placeholder: t("phone_placeholder"),
+      required: t("phone_required"),
+    },
+  ];
   const {
     register,
     handleSubmit,
@@ -67,7 +91,7 @@ function Form() {
         className=" bg-primary text-white rounded-lg absolute -bottom-28 px-12 self-start
      disabled:bg-gray-500 text-lg py-6  "
       >
-        Gönder
+        {t("button")}
       </Button>
     </MotionForm>
   );

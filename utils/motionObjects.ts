@@ -45,7 +45,27 @@ export const animatedFooter = {
 };
 
 //Landing.tsx
-export const animatedLanding = {
+export const animatedLandingOne = {
+  initial: { y: -10, opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  transition: {
+    duration: 1.5,
+    type: "spring",
+    delay: 1,
+  },
+  viewport: { once: true },
+};
+export const animatedLandingTwo = {
+  initial: { y: -10, opacity: 0 },
+  whileInView: { y: 0, opacity: 1 },
+  transition: {
+    duration: 1.5,
+    type: "spring",
+    delay: 1.5,
+  },
+  viewport: { once: true },
+};
+export const animatedLandingThree = {
   initial: { y: -10, opacity: 0 },
   whileInView: { y: 0, opacity: 1 },
   transition: {

@@ -4,9 +4,10 @@ import { Button } from "./ui/button";
 
 type PricingItemProps = {
   title: string;
-  price: number;
+  price: string | number;
   description: string;
   features: string[];
+  buttonTitle: string;
 };
 
 function PricingItem({
@@ -14,6 +15,7 @@ function PricingItem({
   price,
   description,
   features,
+  buttonTitle,
 }: PricingItemProps) {
   return (
     <div className="border font-fontRaleway border-zinc-700 shadow-xl rounded-lg px-8 py-10 flex flex-col space-y-5">
@@ -39,7 +41,7 @@ function PricingItem({
       <Button
         className={`" ${price == 30 && " bg-primary "}  text-white p-5 w-max"`}
       >
-        Choose Plan
+        {buttonTitle}
       </Button>
     </div>
   );
