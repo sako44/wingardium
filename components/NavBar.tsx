@@ -1,4 +1,3 @@
-"use client";
 import { Button } from "@/components/ui/button";
 import Container from "./Container";
 import Link from "next/link";
@@ -43,7 +42,7 @@ function NavBar() {
             {...animatedNavBar}
             className="text-2xl font-semibold  font-fontRaleway uppercase "
           >
-            Wingardium
+            <Link href="/">Wingardium</Link>
           </MotionH2>
           <nav className="space-x-12 xl:space-x-20 font-fontRaleway items-center  flex">
             {navButtons.map((item) => (
@@ -60,7 +59,7 @@ function NavBar() {
                   className="hover:text-primary text-[16px] rounded-full transition duration-300 ease-in-out"
                   variant={"ghost"}
                 >
-                  <Link href={item.href}>{item.title}</Link>
+                  <Link prefetch={true} href={item.href}>{item.title}</Link>
                 </Button>
               </MotionDiv>
             ))}
@@ -68,10 +67,11 @@ function NavBar() {
           <div className="flex space-x-3 items-center">
             <TranslateButton />
             <Button
+              asChild
               variant={"ghost"}
               className=" shadow-xl border-primary border text-[16px] rounded-[15px] px-7 py-5 transition duration-300 ease-in-out"
             >
-              {t("button")}
+              <Link href="/">{t("button")}</Link>
             </Button>
           </div>
         </Container>

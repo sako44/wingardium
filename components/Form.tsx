@@ -5,8 +5,12 @@ import { Button } from "@/components/ui/button";
 import { MotionForm } from "./MotionDiv";
 import { useTranslations } from "next-intl";
 import { animatedBenfitOne } from "@/utils/motionObjects";
+import { useState } from "react";
 
 function Form() {
+  const [checked, setChecked] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("");
+
   const t = useTranslations("Contact");
   const formData = [
     {
@@ -42,58 +46,121 @@ function Form() {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     reset();
   };
+
   return (
-    <MotionForm
-      {...animatedBenfitOne}
-      initial={{ ...animatedBenfitOne.initial, x: 30 }}
-      whileInView={{ ...animatedBenfitOne.whileInView, x: 0 }}
-      onSubmit={handleSubmit(onSubmit)}
-      className=" relative font-fontRaleway
-    w-[80%] sm:w-[65%] lg:max-w-[50%] xl:max-w-[550px] flex flex-col order-last
-     items-center justify-center space-y-5 lg:space-y-8 2xl:sapce-y-12"
+    <div
+      className="px-5 py-12 shadow-gray-600 shadow-xl rounded-xl text-white
+     bg-primary flex justify-center items-center w-full  xl:max-w-[550px] order-last"
     >
-      {formData.map((item) => (
-        <React.Fragment key={item.id}>
-          <input
-            key={item.id}
-            {...register(item.name, {
-              required: item.required,
-            })}
-            type={item.type}
-            placeholder={item.placeholder}
-            className="w-[100%] py-2 rounded-none text-textColorSec focus:text-black placeholder:text-zinc-800  bg-transparent outline-none border-b-2 border-zinc-800"
-          />
-          {errors.name && (
-            <p className="text-red-500 self-start ">{`${
-              errors[item.name]?.message
-            }`}</p>
-          )}
-        </React.Fragment>
-      ))}
-      <textarea
-        {...register("message", {
-          required: "Message is required",
-          minLength: {
-            value: 10,
-            message: "Message must be at least 10 characters",
-          },
-        })}
-        placeholder="Mesajınız"
-        rows={4}
-        className="w-[100%] py-2 rounded-none text-zinc-800 focus:text-black placeholder:text-zinc-800  bg-transparent outline-none border-b-2 border-zinc-800"
-      />
-      {errors.message && (
-        <p className="text-red-500 self-start ">{`${errors.message.message}`}</p>
-      )}
-      <Button
-        disabled={isSubmitting}
-        type="submit"
-        className=" bg-primary text-white rounded-lg absolute -bottom-28 px-12 self-start
-     disabled:bg-gray-500 text-lg py-6  "
+      <MotionForm
+        {...animatedBenfitOne}
+        initial={{ ...animatedBenfitOne.initial, x: 30 }}
+        whileInView={{ ...animatedBenfitOne.whileInView, x: 0 }}
+        onSubmit={handleSubmit(onSubmit)}
+        className="  w-full  font-fontRaleway flex flex-col items-center justify-center space-y-3"
       >
-        {t("button")}
-      </Button>
-    </MotionForm>
+        {formData.map((item) => (
+          <React.Fragment key={item.id}>
+            <div className="flex flex-col space-y-2 items-start w-[100%]">
+              <label
+                htmlFor={item.name}
+                className="text-white font-medium ml-1 text-lg"
+              >
+                {item.placeholder}{" "}
+                <span className="text-red-800 text-3xl">*</span>
+              </label>
+              <input
+                key={item.id}
+                {...register(item.name, {
+                  required: item.required,
+                })}
+                type={item.type}
+                className="w-[100%] py-2 pl-2 font-medium
+             focus:text-black placeholder:text-zinc-800
+                outline-none bg-white border-2 rounded-xl border-zinc-800"
+              />
+            </div>
+            {errors.name && (
+              <p className="text-red-500 self-start ">{`${
+                errors[item.name]?.message
+              }`}</p>
+            )}
+          </React.Fragment>
+        ))}
+        <div className="flex flex-col space-y-1 items-start w-[100%]">
+          <label className="block text-white font-medium ml-1 text-lg">
+            {t("option_label")}
+            <span className="text-red-800 text-3xl">*</span>
+          </label>
+          <select
+            {...register(t("option_name"), {
+              required: t("option_required"),
+            })}
+            value={selectedOption}
+            onChange={(e) => setSelectedOption(e.target.value)}
+            className="w-full p-2 border  font-medium border-primary bg-secondary text-primary rounded "
+          >
+            <option value="">{t("option_placeholder")}</option>
+            <option value="payment_issues">{t("option_1")}</option>
+            <option value="subscription_problems">{t("option_2")}</option>
+            <option value="technical_issues">{t("option_3")}</option>
+            <option value="other">{t("option_4")}</option>
+          </select>
+          {errors.select && (
+            <p className="text-red-500 self-start ">{`${errors.select.message}`}</p>
+          )}
+        </div>
+        <div className="flex flex-col space-y-2 items-start w-[100%]">
+          <label
+            htmlFor="message"
+            className="text-white font-medium ml-1 text-lg"
+          >
+            {t("textArea")} <span className="text-red-800 text-3xl">*</span>
+          </label>
+          <textarea
+            {...register("message", {
+              required: t("textAreaRequired"),
+              minLength: {
+                value: 10,
+                message: t("textAreaMin"),
+              },
+            })}
+            rows={4}
+            className="w-[100%]  py-2 pl-2 font-medium
+         text-zinc-800 focus:text-black placeholder:text-zinc-800
+           outline-none bg-white border-2 rounded-xl border-zinc-800"
+          />
+        </div>
+        {errors.message && (
+          <p className="text-red-500 self-start ">{`${errors.message.message}`}</p>
+        )}
+        <div className="flex items-center self-start ml-1 py-5 ">
+          <input
+            type="checkbox"
+            {...register("checkbox", {
+              required: "You must agree to the Privacy Policy",
+            })}
+            checked={checked}
+            onChange={(e) => setChecked(e.target.checked)}
+            className="w-11 h-6 self-start lg:mb-5 accent-secondary border-2 border-transparent rounded-md focus:cursor-pointer"
+          />
+          <p>
+          {t("checkbox_label")}
+          </p>
+        </div>
+        {errors.checkbox && (
+          <p className="text-red-500 self-start ">{`${errors.checkbox.message}`}</p>
+        )}
+        <Button
+          disabled={isSubmitting}
+          type="submit"
+          className=" bg-white text-black rounded-lg  ml-1 px-12 w-full
+        disabled:bg-gray-500 text-lg py-6  "
+        >
+          {t("button")}
+        </Button>
+      </MotionForm>
+    </div>
   );
 }
 

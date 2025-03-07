@@ -4,6 +4,10 @@ import Autoplay from "embla-carousel-autoplay";
 import AnimatedHeader from "./AnimatedHeader";
 import { animatedReviews } from "@/utils/motionObjects";
 import { useTranslations } from "next-intl";
+import boy1 from "@/public/photos/userb1.svg";
+import boy2 from "@/public/photos/userb2.svg";
+import women1 from "@/public/photos/userw1.svg";
+import women2 from "@/public/photos/userw2.svg";
 
 import {
   Carousel,
@@ -18,40 +22,40 @@ import MotionDiv from "./MotionDiv";
 function Reviews() {
   const t = useTranslations("Reviews");
   const reviews = [
-    { id: 1, name: t("review_1_name"), text: t("review_1_text"), icon: "boy1" },
+    { id: 1, name: t("review_1_name"), text: t("review_1_text"), icon: boy1 },
     {
       id: 2,
       name: t("review_2_name"),
       text: t("review_2_text"),
-      icon: "women1",
+      icon: women1,
     },
-    { id: 3, name: t("review_3_name"), text: t("review_3_text"), icon: "boy2" },
+    { id: 3, name: t("review_3_name"), text: t("review_3_text"), icon: boy2 },
     {
       id: 4,
       name: t("review_4_name"),
       text: t("review_4_text"),
-      icon: "women2",
+      icon: women2,
     },
-    { id: 5, name: t("review_5_name"), text: t("review_5_text"), icon: "boy1" },
-    { id: 6, name: t("review_6_name"), text: t("review_6_text"), icon: "boy1" },
+    { id: 5, name: t("review_5_name"), text: t("review_5_text"), icon: boy1 },
+    { id: 6, name: t("review_6_name"), text: t("review_6_text"), icon: boy1 },
     {
       id: 7,
       name: t("review_7_name"),
       text: t("review_7_text"),
-      icon: "women1",
+      icon: women1,
     },
-    { id: 8, name: t("review_8_name"), text: t("review_8_text"), icon: "boy2" },
+    { id: 8, name: t("review_8_name"), text: t("review_8_text"), icon: boy2 },
     {
       id: 9,
       name: t("review_9_name"),
       text: t("review_9_text"),
-      icon: "women2",
+      icon: women2,
     },
     {
       id: 10,
       name: t("review_10_name"),
       text: t("review_10_text"),
-      icon: "boy1",
+      icon: boy1,
     },
   ];
   return (

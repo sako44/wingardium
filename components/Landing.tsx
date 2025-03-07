@@ -14,7 +14,7 @@ import {
 import logo from "@/public/photos/logo.png";
 import { useTranslations } from "next-intl";
 
-function LandingTwo() {
+function Landing() {
   const t = useTranslations("Landing");
   return (
     <section className=" flex justify-center items-center mt-2 border-[#dad4d4] border-2 rounded-[15px] bgurl bg-contain relative mx-auto w-[99.3%] overflow-hidden h-[93vh] lg:h-[89vh]  3xl:h-[89vh] ">
@@ -107,4 +107,4 @@ function LandingTwo() {
   );
 }
 
-export default LandingTwo;
+export default Landing;

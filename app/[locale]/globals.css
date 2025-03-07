@@ -7,7 +7,7 @@
   }
 }
 .bgurl {
-  background-image: url("../public/photos/background.png");
+  background-image: url("../../public/photos/background.png");
   background-size: contain;
   background-position: top;
   background-repeat: repeat;
