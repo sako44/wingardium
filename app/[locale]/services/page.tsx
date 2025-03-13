@@ -1,4 +1,3 @@
-import Services from "@/components/Services";
 import Services2 from "@/components/Services2";
 
 function Page() {

@@ -1,7 +1,6 @@
 import bildirim from "@/public/photos/bildirim.png";
 import ilac from "@/public/photos/ilac.png";
 import ilacworkone from "@/public/photos/ilacworkone.png";
-import ilacworktwo from "@/public/photos/ilacworktwo.png";
 import satin from "@/public/photos/satin.png";
 import Container from "./Container";
 import { Timeline } from "@/components/ui/timeline";
@@ -58,12 +57,12 @@ export default function Services() {
             className="text-neutral-800 pl-1 text-start  dark:text-neutral-200
            text-xl md:text-lg font-normal  mb-8"
           >
-            <span className="font-bold text-xl">"Bu Sayfayı</span>{" "}
+            <span className="font-bold text-xl">Bu Sayfayı</span>{" "}
             görüntüleyebilmek için önce giriş yapıp bilgilerinizi doldurmanız
             gerekmektedir. Bu sayfada, parsel bilgisi, ilaç, gübre, ilaçlama,
             gübreleme, stoğu azalan ilaçlar, stoğu azalan gübreler, en çok
             kullanılan ilaçlar ve en çok kullanılan gübreler bilgileri özet
-            olarak bulunmaktadır."
+            olarak bulunmaktadır.
           </p>
           <div className="grid grid-cols-2 gap-4 ">
             <div className="p-2 rounded-xl border-2 border-dashed border-white bg-[#737373]">
