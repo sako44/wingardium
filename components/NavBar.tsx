@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Container from "./Container";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import MobileNavbar from "./MobileMenu";
 import MotionDiv, { MotionH2 } from "./MotionDiv";
 import { animatedNavBar } from "@/utils/motionObjects";
@@ -59,7 +60,9 @@ function NavBar() {
                   className="hover:text-primary text-[16px] rounded-full transition duration-300 ease-in-out"
                   variant={"ghost"}
                 >
-                  <Link prefetch={true} href={item.href}>{item.title}</Link>
+                  <Link prefetch={true} href={item.href}>
+                    {item.title}
+                  </Link>
                 </Button>
               </MotionDiv>
             ))}
@@ -71,7 +74,7 @@ function NavBar() {
               variant={"ghost"}
               className=" shadow-xl border-primary border text-[16px] rounded-[15px] px-7 py-5 transition duration-300 ease-in-out"
             >
-              <Link href="/">{t("button")}</Link>
+              <Link href="/contact">{t("button")}</Link>
             </Button>
           </div>
         </Container>

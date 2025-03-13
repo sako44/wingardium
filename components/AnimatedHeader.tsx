@@ -6,7 +6,8 @@ function AnimatedHeader({ title }: { title: string }) {
     <>
       <MotionH2
       {...animatedHeaderOne}
-      className="py-2 px-4 border border-[#727272] text-[#727272] font-fontRaleway font-medium shadow-xl scale-105 rounded-full">
+      className="py-2 px-4 border w-fit mx-auto border-[#727272] text-[#727272]
+       font-fontRaleway font-medium shadow-xl scale-105 rounded-full">
         {title}
       </MotionH2>
     </>

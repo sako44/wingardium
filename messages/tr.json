@@ -95,30 +95,27 @@
     "button": "Hemen Dene"
   },
   "MobileMenu": {
-    "nav_link_1_title": "Hizmetler",
-    "nav_link_1_url": "/services",
-    "nav_link_2_title": "Özellikler",
-    "nav_link_2_url": "/features",
-    "nav_link_3_title": "Planlar",
-    "nav_link_3_url": "/plans",
-    "nav_link_4_title": "İletişim",
-    "nav_link_4_url": "/contact",
+    "nav_link_1_title": "Ana Sayfa",
+    "nav_link_1_url": "/",
+    "nav_link_2_title": "Nasıl Çalışır",
+    "nav_link_2_url": "/services",
+    "nav_link_3_title": "Özellikler",
+    "nav_link_3_url": "/features",
+    "nav_link_4_title": "Planlar",
+    "nav_link_4_url": "/plans",
     "emailTitle": "İletişime Geçin",
     "takipTitle": "Bizi Takip Edin"
   },
   "NavBar": {
-    "nav_button_1_title": "Hizmetler",
-    "nav_button_1_href": "/services",
-
-    "nav_button_2_title": "Özellikler",
-    "nav_button_2_href": "/features",
-
-    "nav_button_3_title": "Planlar",
-    "nav_button_3_href": "/plans",
-
-    "nav_button_4_title": "İletişim",
-    "nav_button_4_href": "/contact",
-    "button": "Ücretsiz Deneyin"
+    "nav_button_1_title": "Ana Sayfa",
+    "nav_button_1_href": "/",
+    "nav_button_2_title": "Hizmetler",
+    "nav_button_2_href": "/services",
+    "nav_button_3_title": "Özellikler",
+    "nav_button_3_href": "/features",
+    "nav_button_4_title": "Planlar",
+    "nav_button_4_href": "/plans",
+    "button": "İletişim"
   },
   "Pricing": {
     "title": "Planlar",

@@ -12,9 +12,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        primary: "#567d46",
-        secondary: "#d6c9ac",
+        primary: "#548977",
+        secondary: "#e3e5d8",
+        color: "#1f3232",
         textColor: "#a0a0a0",
+        textColorDark: "#f0f0f0",
       },
       borderRadius: {
         lg: "var(--radius)",

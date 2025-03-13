@@ -57,11 +57,11 @@ function Form() {
         initial={{ ...animatedBenfitOne.initial, x: 30 }}
         whileInView={{ ...animatedBenfitOne.whileInView, x: 0 }}
         onSubmit={handleSubmit(onSubmit)}
-        className="  w-full  font-fontRaleway flex flex-col items-center justify-center space-y-3"
+        className="  w-full font-fontRaleway flex flex-col items-center justify-center space-y-3"
       >
         {formData.map((item) => (
           <React.Fragment key={item.id}>
-            <div className="flex flex-col space-y-2 items-start w-[100%]">
+            <div className="flex flex-col  items-start w-[100%]">
               <label
                 htmlFor={item.name}
                 className="text-white font-medium ml-1 text-lg"
@@ -75,8 +75,8 @@ function Form() {
                   required: item.required,
                 })}
                 type={item.type}
-                className="w-[100%] py-2 pl-2 font-medium
-             focus:text-black placeholder:text-zinc-800
+                className="w-[100%] py-2 pl-2 font-medium my-2
+              focus:text-black placeholder:text-zinc-800
                 outline-none bg-white border-2 rounded-xl border-zinc-800"
               />
             </div>
@@ -144,9 +144,7 @@ function Form() {
             onChange={(e) => setChecked(e.target.checked)}
             className="w-11 h-6 self-start lg:mb-5 accent-secondary border-2 border-transparent rounded-md focus:cursor-pointer"
           />
-          <p>
-          {t("checkbox_label")}
-          </p>
+          <p>{t("checkbox_label")}</p>
         </div>
         {errors.checkbox && (
           <p className="text-red-500 self-start ">{`${errors.checkbox.message}`}</p>
@@ -154,7 +152,7 @@ function Form() {
         <Button
           disabled={isSubmitting}
           type="submit"
-          className=" bg-white text-black rounded-lg  ml-1 px-12 w-full
+          className=" bg-white text-black hover:bg-black hover:text-white rounded-lg  ml-1 px-12 w-full
         disabled:bg-gray-500 text-lg py-6  "
         >
           {t("button")}
