@@ -11,10 +11,7 @@ function Contact() {
     "https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtMgBvfWMCWwdzfVklVwdnmjxRlnsVdKpWwLgGXCDSFVhQwWvKxGdrfKGJXTzSxKnXhxjdcl";
 
   return (
-    <section
-      id="iletisim"
-      className="pt-12 pb-32 mb-12 border-[#dad4d4] border-2 rounded-[15px] mx-auto w-[98%] lg:w-[99.3%]"
-    >
+    <section className=" mt-5 pt-5 pb-32 mb-12 border-[#dad4d4] border-2 rounded-t-[15px] mx-auto w-[98%] lg:w-[99.3%]">
       <Container clas=" flex flex-col justify-center items-center text-center ">
         <AnimatedHeader title={t("title")} />
         <div className="flex flex-col lg:flex-row space-y-12 lg:space-y-0 lg:justify-between mt-24 sm:w-[80%] md:w-[70%] lg:w-full 2xl:w-[90%]">
@@ -59,11 +56,11 @@ function Contact() {
           <Form />
         </div>
       </Container>
-      <div className="relative z-[-1] w-full -mt-40 -mb-28">
+      <div className="relative  z-[-1] w-full -mt-40 -mb-32">
         <Images
           url={contactImage}
           addClass=" w-full h-[500px] "
-          clas=" object-cover object-center "
+          clas=" object-cover  object-center "
         />
       </div>
     </section>

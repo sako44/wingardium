@@ -76,7 +76,7 @@ function Landing() {
         <div className="flex flex-col space-y-3">
           <MotionH2
             {...animatedLandingOne}
-            className=" text-4xl max-w-[90%] md:max-w-full mx-auto sm:text-5xl md:text-6xl  xl:text-7xl  font-bold inline-block  text-primary bg-secondary px-2 py-2 rounded-sm "
+            className=" text-4xl max-w-[90%] md:max-w-full mx-auto sm:text-5xl md:text-6xl  xl:text-7xl  font-bold inline-block  text-primary bg-bgColor px-2 py-2 rounded-sm "
           >
             {t("hero")}
           </MotionH2>

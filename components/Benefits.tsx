@@ -69,7 +69,7 @@ function Benefits() {
             </Button>
           </MotionDiv>
         </div>
-        <div className="flex flex-col md:flex-row max-xl:space-y-5  md:space-x-5 lg:grow lg:max-2xl:w-full 2xl:max-3xl:w-[80%]">
+        <div className="flex flex-col md:flex-row max-xl:space-y-5 py-3 md:space-x-5 lg:grow lg:max-2xl:w-full 2xl:max-3xl:w-[80%]">
           <MotionDiv {...animatedBenfitOne} className="flex flex-col gap-y-5">
             {benefits.map((item, index) =>
               index === 0 || index == 2 ? (

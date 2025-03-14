@@ -84,7 +84,7 @@ export default function Features() {
     },
   ];
   return (
-    <Container clas=" mt-8 lg:my-12 overflow-x-hidden ">
+    <Container clas=" mt-16 lg:my-12 overflow-x-hidden ">
       <div className="flex  flex-col lg:items-center overflow-y-hidden space-y-6 lg:space-y-8  ">
         <AnimatedHeader title={t("title")} />
         <h3
@@ -108,14 +108,14 @@ export default function Features() {
           ))}
         </div>
       </div>
-      <div className=" px-3 2xl:px-24 relative z-10 -mt-11 lg:-mt-16">
-        <div className="relative  py-12 rounded-3xl bg-primary z-[-1] w-full mt-12 mx-auto ">
+      <div className=" mb-5 px-3 2xl:px-24 relative z-10 -mt-14 lg:-mt-16 overflow-hidden">
+        <div className="relative py-12 rounded-3xl bg-primary z-[-1] w-full max-lg:h-[400px] mt-12 mx-auto ">
           <Images
             url={featuresImages[hovered].image}
             addClass=" mx-auto hover:scale-105 transition duration-300 ease-in-out rounded-3xl w-[90%] h-[550px] "
-            clas=" rounded-3xl border-2  border-textColor max-lg:object-right object-cover "
+            clas=" rounded-3xl border-2  border-textColor max-lg:object-left object-cover "
           />
-          <div className="absolute bottom-0 left-0 w-full h-64 rounded-3xl bg-gradient-to-t from-white to-transparent"></div>{" "}
+          <div className="absolute bottom-0 left-0 w-full h-24 lg:h-64 rounded-3xl bg-gradient-to-t from-white to-transparent"></div>{" "}
         </div>
       </div>
     </Container>

@@ -7,6 +7,7 @@ import MotionDiv, { MotionH2 } from "./MotionDiv";
 import { animatedNavBar } from "@/utils/motionObjects";
 import TranslateButton from "@/components/TranslateButton";
 import { useTranslations } from "next-intl";
+import NavBarLinks from "./NavBarLinks";
 
 //bg-[#d6c9ac]
 
@@ -34,9 +35,8 @@ function NavBar() {
       href: t("nav_button_4_href"),
     },
   ];
-
   return (
-    <MotionDiv className="bg-transparent max-lg:h-16 w-full z-30 relative">
+    <MotionDiv className="bg-bgColor max-lg:h-16 w-full z-30 relative">
       <MotionDiv className=" hidden lg:block ">
         <Container clas="  py-7 justify-between items-center flex   ">
           <MotionH2
@@ -55,15 +55,7 @@ function NavBar() {
                   delay: item.id * 0.4,
                 }}
               >
-                <Button
-                  asChild
-                  className="hover:text-primary text-[16px] rounded-full transition duration-300 ease-in-out"
-                  variant={"ghost"}
-                >
-                  <Link prefetch={true} href={item.href}>
-                    {item.title}
-                  </Link>
-                </Button>
+                <NavBarLinks href={item.href} title={item.title} />
               </MotionDiv>
             ))}
           </nav>
@@ -72,7 +64,8 @@ function NavBar() {
             <Button
               asChild
               variant={"ghost"}
-              className=" shadow-xl border-primary border text-[16px] rounded-[15px] px-7 py-5 transition duration-300 ease-in-out"
+              className=" shadow-xl border-primary
+               hover:bg-secondary hover:text-primary border text-[16px] rounded-[15px] px-7 py-5 transition duration-300 ease-in-out"
             >
               <Link href="/contact">{t("button")}</Link>
             </Button>

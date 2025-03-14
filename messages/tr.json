@@ -77,9 +77,9 @@
   "Footer": {
     "herOne": "Destek :",
     "support_nav_1_title": "Help & FAQs",
-    "support_nav_1_url": "#faq",
+    "support_nav_1_url": "/contact#faq",
     "support_nav_2_title": "İletişim",
-    "support_nav_2_url": "#iletisim",
+    "support_nav_2_url": "/contact",
     "support_nav_3_title": "Canlı Destek",
     "support_nav_3_url": "https://wa.me/+905347926583?text=Merhaba%20",
     "herTwo": "İletişim :",

@@ -46,7 +46,7 @@ function Pricing() {
     },
   ];
   return (
-    <section className=" px-4 sm:px-24 md:px-4 pb-24 xl:p-24 mt-8 xl:-mt-14 flex items-center justify-center">
+    <section className=" px-4 sm:px-24 md:px-4 pb-24 xl:p-24 mt-16 xl:-mt-14 flex items-center justify-center">
       <div>
         <MotionH2 className="mx-auto w-fit" {...animatedPlansOne}>
           <AnimatedHeader title={t("title")} />

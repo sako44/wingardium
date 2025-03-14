@@ -98,7 +98,7 @@ function Form() {
             })}
             value={selectedOption}
             onChange={(e) => setSelectedOption(e.target.value)}
-            className="w-full p-2 border  font-medium border-primary bg-secondary text-primary rounded "
+            className="w-full p-2 border  font-medium border-primary bg-bgColor text-primary rounded "
           >
             <option value="">{t("option_placeholder")}</option>
             <option value="payment_issues">{t("option_1")}</option>
@@ -142,7 +142,7 @@ function Form() {
             })}
             checked={checked}
             onChange={(e) => setChecked(e.target.checked)}
-            className="w-11 h-6 self-start lg:mb-5 accent-secondary border-2 border-transparent rounded-md focus:cursor-pointer"
+            className="w-11 h-6 self-start lg:mb-5 accent-bgColor border-2 border-transparent rounded-md focus:cursor-pointer"
           />
           <p>{t("checkbox_label")}</p>
         </div>

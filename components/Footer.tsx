@@ -101,8 +101,18 @@ function Footer() {
           >
             <p className="xs:text-center">All Rights Reserved</p>
             <div className="flex flex-col xs:flex-row max-xs:space-y-5 xs:justify-around  lg:space-x-8 xl:space-x-12 2xl:space-x-16">
-              <p>Privacy Policy</p>
-              <p>Terms and Services</p>
+              <Link
+                className="hover:text-primary transition-all duration-300 ease-in-out"
+                href="/terms"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                className="hover:text-primary transition-all duration-300 ease-in-out"
+                href="/terms"
+              >
+                Terms and Services
+              </Link>
             </div>
           </MotionDiv>
         </div>

@@ -47,9 +47,9 @@ const MobileNavbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 2, type: "spring", delay: 0.2 }}
-      className="lg:hidden px-5 py-4  sm:px-7 max-lg:h-[66px] md:px-10 w-full overflow-hidden"
+      className=" bg-bgColor lg:hidden px-5 py-3  sm:px-7 max-lg:h-[80px] md:px-10 w-full overflow-hidden"
     >
-      <div className="fixed inset-0 z-[3000] px-4 h-fit">
+      <div className="  px-4  ">
         <div className="flex justify-between items-center  pt-2">
           <h2 className="text-xl font-semibold uppercase ">Wingardium </h2>
           <div className="flex items-center space-x-3">
@@ -75,7 +75,7 @@ const MobileNavbar = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
             className="fixed inset-0 z-50 w-full
-             bg-secondary pt-[112px] text-popover-foreground px-4 flex justify-center flex-col  h-[100vh]"
+             bg-bgColor pt-[112px] text-popover-foreground px-4 flex justify-center flex-col  h-[100vh]"
           >
             <div className="flex flex-col gap-8 mt-7 items-start ">
               {navLinks.map((link, index) => (
@@ -84,7 +84,7 @@ const MobileNavbar = () => {
                   asChild
                   variant={"ghost"}
                   className={` ${
-                    link.active ? "text-primary" : "text-secondary-foreground"
+                    link.active ? "text-primary" : "text-bgColor-foreground"
                   } " px-0 text-4xl hover:text-primary hover:bg-transparent "`}
                   onClick={closeMenu}
                 >

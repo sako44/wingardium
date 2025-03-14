@@ -142,7 +142,7 @@ export default function Services() {
     },
   ];
   return (
-    <div id="hizmet" className="w-full bg-secondary">
+    <div id="hizmet" className="w-full bg-bgColor">
       <Container>
         <div id="#hizmet" className="w-full">
           <Timeline

@@ -89,7 +89,7 @@ function Reviews() {
                         ...animatedReviews.transition,
                         delay: index * 0.1,
                       }}
-                      className="flex flex-col bg-secondary border border-primary rounded-[15px] h-[210px] p-5 space-y-3  "
+                      className="flex flex-col bg-bgColor border border-primary rounded-[15px] h-[210px] p-5 space-y-3  "
                     >
                       <div className="flex items-center space-x-4">
                         <Images
