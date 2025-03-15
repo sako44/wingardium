@@ -8,10 +8,10 @@ import hata from "@/public/photos/hata.svg";
 import MotionDiv, { MotionH2 } from "./MotionDiv";
 import { useTranslations } from "next-intl";
 import { animatedBenfitOne } from "@/utils/motionObjects";
+import { Link } from "@/i18n/navigation";
 
 function Benefits() {
   const t = useTranslations("Benefits");
-
   const benefits = [
     {
       id: 1,
@@ -61,11 +61,12 @@ function Benefits() {
             transition={{ ...animatedBenfitOne.transition, delay: 1.5 }}
           >
             <Button
+              asChild
               className="animate-shimmer rounded-full py-6 px-8 text-[18px] hover:text-gray-200 
              bg-[linear-gradient(110deg,#567d46,45%,#6b8f5a,55%,#567d46)]
              bg-[length:200%_100%]  text-white w-max"
             >
-              {t("button")}
+              <Link href="/plans">{t("button")}</Link>
             </Button>
           </MotionDiv>
         </div>

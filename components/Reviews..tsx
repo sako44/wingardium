@@ -67,7 +67,7 @@ function Reviews() {
             <Carousel
               plugins={[
                 Autoplay({
-                  delay: 3000,
+                  delay: 5000,
                 }),
               ]}
               opts={{

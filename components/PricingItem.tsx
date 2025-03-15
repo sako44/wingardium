@@ -1,6 +1,7 @@
 import right from "@/public/icon/right.svg";
 import Images from "./images";
 import { Button } from "./ui/button";
+import { Link } from "@/i18n/navigation";
 
 type PricingItemProps = {
   title: string;
@@ -39,13 +40,14 @@ function PricingItem({
           /mo
         </p>
         <Button
+          asChild
           className={`" ${
             price == 30
               ? " bg-white font-medium text-black hover:bg-black hover:text-white "
               : " bg-primary text-white hover:bg-black hover:text-white "
           }  p-5 font-medium w-max"`}
         >
-          {buttonTitle}
+          <Link href="/contact">{buttonTitle}</Link>
         </Button>
       </div>
       <ul className="space-y-2 pt-12 pb-3">

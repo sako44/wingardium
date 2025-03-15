@@ -27,6 +27,7 @@ export default {
         shimmer: "shimmer 2s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        progress: "progress 3s linear forwards",
       },
       keyframes: {
         shimmer: {
@@ -51,6 +52,14 @@ export default {
           },
           to: {
             height: "0",
+          },
+        },
+        progress: {
+          from: {
+            width: "0%",
+          },
+          to: {
+            width: "100%",
           },
         },
       },

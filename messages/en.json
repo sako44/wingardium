@@ -10,7 +10,8 @@
     "benefit3_title": "Increased Efficiency",
     "benefit3_description": "Increased productivity with accurate timing.",
     "benefit4_title": "Minimizing Errors",
-    "benefit4_description": "Prevention of manual errors in operations."
+    "benefit4_description": "Prevention of manual errors in operations.",
+    "footer_title": "MORE"
   },
   "Contact": {
     "title": "Contact Form",
@@ -38,7 +39,9 @@
     "textArea": "Your Message",
     "textAreaRequired": "You must write a message",
     "textAreaMin": "The message must be at least 10 characters long",
-    "checkbox_label": "I agree to the Privacy Policy and give my permission to process my personal data for the purposes specified in the Privacy Policy.",
+    "checkbox_label_part_1": "I accept the ",
+    "checkbox_link": "Privacy Policy",
+    "checkbox_label_part_2": "and give my permission to process my personal data for the purposes specified in the Privacy Policy.",
     "button": "Submit"
   },
   "Faq": {
@@ -56,18 +59,13 @@
   },
   "Features": {
     "title": "Features",
-    "feature_1_title": "Purchase Management",
-    "feature_1_description": "Tracking input costs and order processes.",
-    "feature_2_title": "Harvest Planning and Tracking",
-    "feature_2_description": "Yield analysis and harvest time management.",
-    "feature_3_title": "Product and Parcel Tracking",
-    "feature_3_description": "Parcel-based yield tracking.",
-    "feature_4_title": "Stock and Inventory Tracking",
-    "feature_4_description": "Tracking agricultural input stock.",
-    "feature_5_title": "Spraying and Fertilizing Management",
-    "feature_5_description": "Spraying and fertilizing notifications with accurate timing.",
-    "feature_6_title": "Real-time Notifications and Reports",
-    "feature_6_description": "Real-time analysis and reporting."
+    "hero": "Solve the Biggest Challenges in Your Agricultural Management",
+    "features_titleOne": "Production and Harvest Tracking",
+    "features_textOne": "Manage the entire process from planting to harvest with parcel-based productivity analysis. Plan harvest times in advance to increase yield and identify potential issues early in the production process.",
+    "features_titleTwo": "Stock and Order Management",
+    "features_textTwo": "Track the stock status of agricultural inputs in real-time, streamline order processes, and keep costs under control to prevent unnecessary spending.",
+    "features_titleThree": "Spraying and Reporting",
+    "features_textThree": "Manage plant protection and feeding processes with precise timing, optimize spraying and fertilization operations. Additionally, report all processes to increase efficiency."
   },
   "Footer": {
     "herOne": "Support:",
@@ -78,7 +76,10 @@
     "support_nav_3_title": "Live Support",
     "support_nav_3_url": "https://wa.me/+905347926583?text=Hello%20",
     "herTwo": "Contact:",
-    "herThree": "Follow Us:"
+    "herThree": "Follow Us:",
+    "footer_title_1": "All Rights Reserved © 2025 Wingardium",
+    "footer_title_2": "Privacy Policy",
+    "footer_title_3": "Terms and Services"
   },
   "Landing": {
     "hero": "Plan, Farm, and Track",
@@ -163,10 +164,13 @@
   },
   "Services": {
     "hero": "How It Works?",
-    "description": "It offers critical functions such as spraying, fertilizing, stock management, expense tracking, and monitoring other agricultural operations in an integrated structure.",
-    "titleOne": "Parcel and product identification.",
-    "titleTwo": "Creating spraying and fertilizing plans.",
-    "titleThree": "Tracking harvest and purchase processes.",
-    "titleFour": "Management with real-time notifications."
+    "description": "A solution for spraying, fertilization, stock management, expense tracking, and more.",
+    "stepOne_title": "Step 1",
+    "stepOne_text": "As the first step, you log in to the website and create your own account. Then, you fill in your personal information completely. After that, you add field, farm, or company details (location, name, area, etc.) to the system.",
+    "stepTwo_title": "Step 2",
+    "stepTwo_text": "After adding the fields, you introduce the cultivated products into the system. Detailed information such as product analysis data (soil, water, plant analysis), fertilization, spraying, growth stages, and resource/cost information are entered.",
+    "stepThree_title": "Step 3",
+    "stepThree_text": "You can easily manage all the lands you own through the system and regularly track their status. Information can be updated separately for each field or farm.",
+    "stepFour_text": "You can easily access analysis results, used pesticides, and product details."
   }
 }

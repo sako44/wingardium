@@ -10,7 +10,8 @@
     "benefit3_title": "Verimlilik Artışı",
     "benefit3_description": "Doğru zamanlamalarla artan verim.",
     "benefit4_title": "Hataları Minimize Etme",
-    "benefit4_description": "Manuel hataların işlemlerini önlenmesi."
+    "benefit4_description": "Manuel hataların işlemlerini önlenmesi.",
+    "footer_title": "DAHA FAZLA"
   },
   "Contact": {
     "title": "İletişim Formu",
@@ -38,7 +39,9 @@
     "textArea": "Mesajınız",
     "textAreaRequired": "Mesaj Yazmanız Gerekmektedir",
     "textAreaMin": "Mesaj en az 10 karakter olmalıdır",
-    "checkbox_label": "Gizlilik Politikası’nı kabul ediyorum ve kişisel verilerimin Gizlilik Politikası’nda belirtilen amaçlar doğrultusunda işlenmesine izin veriyorum.",
+    "checkbox_label_part_1": "",
+    "checkbox_link": "Gizlilik Politikası’nı",
+    "checkbox_label_part_2": "kabul ediyorum ve kişisel verilerimin Gizlilik Politikası’nda belirtilen amaçlar doğrultusunda işlenmesine izin veriyorum.",
     "button": "Gönder"
   },
   "Faq": {
@@ -56,34 +59,27 @@
   },
   "Features": {
     "title": "Uygulamanın özellİkler",
-    "feature_1_title": "Satın Alma Yönetimi",
-    "feature_1_description": "Girdi maliyetlerinin ve sipariş süreçlerinin takibi.",
-
-    "feature_2_title": "Hasat Planlama ve Takibi",
-    "feature_2_description": "Verim analizleri ve hasat zamanı yönetimi",
-
-    "feature_3_title": "Ürün ve Parsel Takibi",
-    "feature_3_description": "Parsel bazlı verimlilik takibi",
-
-    "feature_4_title": "Stok ve Envanter Takibi",
-    "feature_4_description": "Tarım girdilerinin stok kontrolü",
-
-    "feature_5_title": "İlaçlama ve Gübreleme Yönetimi",
-    "feature_5_description": "Doğru zamanlamayla ilaçlama ve gübreleme bildirimleri.",
-
-    "feature_6_title": "Anlık Bildirimler ve Raporlar",
-    "feature_6_description": "Gerçek zamanlı analiz ve raporlama."
+    "hero": "Tarım Yönetiminizdeki En Büyük Zorlukları Çözün",
+    "features_titleOne": "Üretim ve Hasat Takibi",
+    "features_textOne": "Parsel bazlı verimlilik analizleri ile ekimden hasada kadar tüm süreci yönetin. Hasat zamanlarını önceden planlayarak verimi artırın ve üretim sürecinde karşılaşılabilecek sorunları erken tespit edin.",
+    "features_titleTwo": "Stok ve Sipariş Yönetimi",
+    "features_textTwo": "Tarım girdilerinin stok durumunu anlık olarak takip edin, sipariş süreçlerini daha verimli hale getirin ve maliyetleri kontrol altında tutarak gereksiz harcamaların önüne geçin.",
+    "features_titleThree": "İlaçlama ve Raporlama",
+    "features_textThree": "Bitki koruma ve besleme süreçlerini doğru zamanlamayla yönetin, ilaçlama ve gübreleme işlemlerini optimize edin. Ayrıca, tüm süreçleri raporlayarak verimliliği artırın."
   },
   "Footer": {
     "herOne": "Destek :",
-    "support_nav_1_title": "Help & FAQs",
+    "support_nav_1_title": "Sıkça Sorulan Sorular",
     "support_nav_1_url": "/contact#faq",
     "support_nav_2_title": "İletişim",
     "support_nav_2_url": "/contact",
     "support_nav_3_title": "Canlı Destek",
     "support_nav_3_url": "https://wa.me/+905347926583?text=Merhaba%20",
     "herTwo": "İletişim :",
-    "herThree": "Bizi Takip Et :"
+    "herThree": "Bizi Takip Et :",
+    "footer_title_1": "Tüm Hakları Saklıdır © 2025 Wingardium",
+    "footer_title_2": "Gizlilik Politikası",
+    "footer_title_3": "Kullanım Koşulları"
   },
   "Landing": {
     "hero": "Planla, Tarım ve Takip Et ",
@@ -177,10 +173,13 @@
   },
   "Services": {
     "hero": "Nasıl Çalışır?",
-    "description": "İlaçlama, gübreleme, stok yönetimi, gider takibi ve diğer tarımsal operasyonların izlenmesi gibi kritik işlevleri entegre bir yapıda sunar.",
-    "titleOne": "Parsel ve ürün tanımlama.",
-    "titleTwo": "İlaçlama ve gübreleme planlarını yapma.",
-    "titleThree": "Hasat ve satın alma süreçlerini takip etme.",
-    "titleFour": "Anlık bildirimlerle yönetim."
+    "description": "İlaçlama, gübreleme, stok yönetimi, gider takibi ve daha fazlası için bir çözüm.",
+    "stepOne_title": "1. Adım",
+    "stepOne_text": "İlk adım olarak siteye giriş yaparak kendi hesabınızı oluşturuyorsunuz. Ardından, kişisel bilgilerinizi eksiksiz bir şekilde dolduruyorsunuz. Daha sonra tarla, çiftlik veya şirket bilgilerini (konum, isim, alan, vb.) sisteme ekliyorsunuz.",
+    "stepTwo_title": "2. Adım",
+    "stepTwo_text": "Tarlaları ekledikten sonra, ekili ürünleri sisteme tanıtıyorsunuz. Ürünle ilgili analiz bilgileri (toprak, su, bitki analizi), gübreleme, ilaçlama, büyüme aşamaları ve kullanılan kaynak/maliyet bilgileri detaylı olarak giriliyor.",
+    "stepThree_title": "3. Adım",
+    "stepThree_text": "Sistem üzerinden sahip olduğunuz tüm arazileri kolayca yönetebilir ve durumlarını düzenli olarak takip edebilirsiniz. Her tarla ya da çiftlik için ayrı ayrı bilgi güncellemesi yapılabilir.",
+    "stepFour_text": "Analiz sonuçları, kullanılan ilaçlar ve ürün detaylarına kolayca ulaşabilirsiniz."
   }
 }

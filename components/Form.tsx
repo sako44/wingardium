@@ -6,10 +6,13 @@ import { MotionForm } from "./MotionDiv";
 import { useTranslations } from "next-intl";
 import { animatedBenfitOne } from "@/utils/motionObjects";
 import { useState } from "react";
+import Toast from "./Toast";
+import { Link } from "@/i18n/navigation";
 
 function Form() {
   const [checked, setChecked] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
+  const [showToast, setShowToast] = useState(false);
 
   const t = useTranslations("Contact");
   const formData = [
@@ -44,6 +47,7 @@ function Form() {
 
   const onSubmit = async () => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
+    setShowToast(true);
     reset();
   };
 
@@ -52,6 +56,7 @@ function Form() {
       className="px-5 py-12 shadow-gray-600 shadow-xl rounded-xl text-white
      bg-primary flex justify-center items-center w-full  xl:max-w-[550px] order-last"
     >
+      {showToast && <Toast onClose={() => setShowToast(false)} />}
       <MotionForm
         {...animatedBenfitOne}
         initial={{ ...animatedBenfitOne.initial, x: 30 }}
@@ -76,7 +81,7 @@ function Form() {
                 })}
                 type={item.type}
                 className="w-[100%] py-2 pl-2 font-medium my-2
-              focus:text-black placeholder:text-zinc-800
+              focus:text-zinc-800 text-zinc-800
                 outline-none bg-white border-2 rounded-xl border-zinc-800"
               />
             </div>
@@ -126,8 +131,8 @@ function Form() {
               },
             })}
             rows={4}
-            className="w-[100%]  py-2 pl-2 font-medium
-         text-zinc-800 focus:text-black placeholder:text-zinc-800
+            className="w-[100%]  py-2 pl-2 font-medium text-zinc-800
+         focus:text-zinc-800 
            outline-none bg-white border-2 rounded-xl border-zinc-800"
           />
         </div>
@@ -144,7 +149,16 @@ function Form() {
             onChange={(e) => setChecked(e.target.checked)}
             className="w-11 h-6 self-start lg:mb-5 accent-bgColor border-2 border-transparent rounded-md focus:cursor-pointer"
           />
-          <p>{t("checkbox_label")}</p>
+          <p className="text-start ml-1">
+            <span>{t("checkbox_label_part_1") || " "}</span>
+            <Link
+              href="/terms"
+              className=" underline hover:text-secondary transition duration-300"
+            >
+              {t("checkbox_link")}
+            </Link>{" "}
+            <span>{t("checkbox_label_part_2")}</span>{" "}
+          </p>
         </div>
         {errors.checkbox && (
           <p className="text-red-500 self-start ">{`${errors.checkbox.message}`}</p>

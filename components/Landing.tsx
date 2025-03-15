@@ -13,6 +13,7 @@ import {
 } from "@/utils/motionObjects";
 import logo from "@/public/photos/logo.png";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 function Landing() {
   const t = useTranslations("Landing");
@@ -94,12 +95,12 @@ function Landing() {
           <h2 className="text-black max-w-[70%] lg:max-w-[90%] xl:w-full sm:text-xl xl:text-2xl text-center -mt-4">
             {t("description")}
           </h2>
-          <Button
+          <Button asChild
             className="animate-shimmer rounded-full py-6 px-8 text-[18px] hover:text-gray-200 
              bg-[linear-gradient(110deg,#567d46,45%,#6b8f5a,55%,#567d46)]
              bg-[length:200%_100%]  text-white w-max "
           >
-            Hemen Dene
+            <Link href="/plans">{t("button")}</Link>
           </Button>
         </MotionDiv>
       </div>

@@ -48,27 +48,23 @@ export default function Features() {
   const featuresData = [
     {
       id: 1,
-      title: "Üretim ve Hasat Takibi ",
-      description:
-        "Parsel bazlı verimlilik analizleri ile ekimden hasada kadar tüm süreci yönetin. Hasat zamanlarını önceden planlayarak verimi artırın ve üretim sürecinde karşılaşılabilecek sorunları erken tespit edin.",
+      title: t("features_titleOne"),
+      description: t("features_textOne"),
       icon: "ri-plant-line",
     },
     {
       id: 2,
-      title: "Stok ve Sipariş Yönetimi",
-      description:
-        "Tarım girdilerinin stok durumunu anlık olarak takip edin, sipariş süreçlerini daha verimli hale getirin ve maliyetleri kontrol altında tutarak gereksiz harcamaların önüne geçin.",
+      title: t("features_titleTwo"),
+      description: t("features_textTwo"),
       icon: "ri-stack-line",
     },
     {
       id: 3,
-      title: "İlaçlama ve Raporlama",
-      description:
-        "Bitki koruma ve besleme süreçlerini doğru zamanlamayla yönetin, ilaçlama ve gübreleme işlemlerini optimize edin. Ayrıca, tüm süreçleri raporlayarak verimliliği artırın.",
+      title: t("features_titleThree"),
+      description: t("features_textThree"),
       icon: "ri-folder-chart-line",
     },
   ];
-
   const featuresImages = [
     {
       image: featuresBg,
@@ -91,7 +87,7 @@ export default function Features() {
           className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-fontNunito mx-auto
          font-medium text-center max-w-[80%] xs:max-w-[60%]  2xl:max-w-[40%] "
         >
-          Tarım Yönetiminizdeki En Büyük Zorlukları Çözün
+          {t("hero")}
         </h3>
         <div className=" px-3 2xl:px-24  font-fontRaleway  grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 ">
           {featuresData.map((item) => (
