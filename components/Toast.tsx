@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import MotionDiv from "./MotionDiv";
 import { animatedBenfitOne } from "@/utils/motionObjects";
 
